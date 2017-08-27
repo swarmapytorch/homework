@@ -1,0 +1,27 @@
+
+"""简单的 LeNet-5类型的卷积神经网络模型，MNIST例子.
+"""
+
+#所有依赖包
+
+import gzip
+import os
+import sys
+
+import numpy as np
+from six.moves import urllib
+import torch
+from torch.autograd import Variable
+import torch.optim as optim
+
+import matplotlib.pylab as plt
+
+#定义一系列常数
+SOURCE_URL = 'http://yann.lecun.com/exdb/mnist/' #图像数据如果没下载，可以从这个地址下载
+WORK_DIRECTORY = 'data' #存储的路径名
+IMAGE_SIZE = 28 #每张图片的大小尺寸
+NUM_CHANNELS = 1  #每张图片的通道数
+PIXEL_DEPTH = 255 #像素的深度0-255
+NUM_LABELS = 10 #手写数字，一共十种
+
+%matplotlib inline
